@@ -22,4 +22,6 @@ Runs kernel ridge regression on user-specified X & Y training datasets, and eval
 Runs a nonlinear logistic regression with parameter *alpha*, which is in (-5,5) on a user-inputted dataset of 2 predictors (X and Z) and Y. Uses secant method to find the root of the score equation. Outputs estimated alpha.
 
 ### Project 5: Neural Network Model
+[neuralNetwork.R](./neuralNetwork.R)
 
+Uses the Nelder-Mead algorithim to fit a one-layer neural network model on a user-inputted dataset of X & Y, with a user-inputted number of nodes *p*.
