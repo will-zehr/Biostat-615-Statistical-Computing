@@ -1,5 +1,4 @@
 args<-commandArgs(trailingOnly=TRUE)
-#args<-c('nn_test2.csv',14)
 data=read.csv(args[1])
 p=as.numeric(args[2])
 n<-length(data)
@@ -14,37 +13,10 @@ obj_function<-function(alpha,x=data[,1],y=data[,2]){
   running=0
   n=length(x)
   for (i in 1:n){
-    #r=0
-  #   for(j in 2:(p+1)){
-  #     r=r+alpha[j]*max(0,alpha[p+j]+alpha[2*p+j]*x[i])
-  #   }
-  #running=running+(y[i]-alpha[1]-r)^2
-  #relu=alpha[(p+2):(2*p+1)]+alpha[(2*p+2):(3*p+1)]*x[i]
-  #relu[relu<=0]=0L
-  #running=running+(y[i]-alpha[1]-sum(relu))^2
   running=running+(y[i]-alpha[1]-relu(alpha,x[i]))^2
   }
   running/n
-  #apply(data,1, function (x){(1/n)*sum(x[2]-alpha[1]-alpha[(p+2):(2*p+1)]+alpha[(2*p+2):(3*p+1)]*x[2])^2})
-}
-
-
-
-
-
-# obj_function<-function(alpha,x=data[,1],y=data[,2]){
-#   running=0
-#   n=length(x)
-#   for (i in 1:n){
-#     r=0
-#     for(j in 2:p){
-#       r=r+alpha[j]*max(0,alpha[p+j]+alpha[2*p+j]*x[i])
-#     }
-#     running=running+(y[i]-alpha[1]-r)^2
-#   }
-#   running/n
-# }
-
+  }
 
 
 Nelder.Mead <- function(f, x0, tol = 1e-5, max_iter = 8000){
@@ -137,9 +109,7 @@ Nelder.Mead <- function(f, x0, tol = 1e-5, max_iter = 8000){
     }
   }
   
-  #cat(formatC(Y[idx_min],digits=5,flag="-"),'\n',f_evals)
-  #return(list(xmin=X[,idx_min],fmin=Y[idx_min],convergence=convergence,iter=iter, evals=f_evals))
-  return(list(fmin=Y[idx_min],evals=f_evals))
+   return(list(fmin=Y[idx_min],evals=f_evals))
 }
 
 results=Nelder.Mead(obj_function,x0=rep(0,3*p+1))
