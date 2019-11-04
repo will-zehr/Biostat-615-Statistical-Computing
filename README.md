@@ -17,7 +17,9 @@ For regularized linear regression, fit a ridge-penalized multiple linear regress
 Runs kernel ridge regression on user-specified X & Y training datasets, and evaluates choice of lambda using user-specified X & Y testing datasets. Outputs predictive mean squared errors.
 
 ### Project 4: Nonlinear Logistic Regression
+[nonlinearLogisticRegression.R](./nonlinearLogisticRegression.R)
 
+Runs a nonlinear logistic regression with parameter *alpha*, which is in (-5,5) on a user-inputted dataset of 2 predictors (X and Z) and Y. Uses secant method to find the root of the score equation.
 
 ### Project 5: Neural Network Model
 
