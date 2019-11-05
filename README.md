@@ -56,8 +56,7 @@ R --slave --args logit_test1.csv < nonlinearLogisticRegression.R
 Uses the Nelder-Mead algorithim to fit a one-layer neural network model on a user-inputted dataset of X & Y, with a user-inputted number of nodes *p*. Outputs minimum value of the objective function and the number of completed function evaluations.
 
 ```console
-R --slave --args nn_test1.csv 10 <
-neuralNetwork.R
+R --slave --args nn_test1.csv 10 < neuralNetwork.R
 0.0089142
 1865
 ```
