@@ -17,7 +17,7 @@ R --slave --args 3 0.5 1.0 1.5 < constrainedPolynomialRegression.R
 For regularized linear regression, fit a ridge-penalized multiple linear regression, with a user-inputted lambda value and datasets X and Y. Outputs non-zero rounded beta coefficients.
 
 ```console
-R --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
+R --slave --args ./datasets/test1.X ./datasets/test1.Y 0.1 < fastRidgeRegression.R
 1 14
 2 -10
 3 2
@@ -36,7 +36,7 @@ R --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
 Runs kernel ridge regression on user-specified X & Y training datasets, and evaluates choice of lambda using user-specified X & Y testing datasets. Outputs predictive mean squared errors.
 
 ```console
-R --slave --args test1.csv 3 1.0 3 < kernelRidgeRegression.R
+R --slave --args ./datasets/test1.csv 3 1.0 3 < kernelRidgeRegression.R
 8.029
 ```
 
@@ -46,7 +46,7 @@ R --slave --args test1.csv 3 1.0 3 < kernelRidgeRegression.R
 Runs a nonlinear logistic regression with parameter *alpha*, which is in (-5,5) on a user-inputted dataset of 2 predictors (X and Z) and Y. Uses secant method to find the root of the score equation. Outputs estimated alpha.
 
 ```console
-R --slave --args logit_test1.csv < nonlinearLogisticRegression.R
+R --slave --args ./datasets/logit_test1.csv < nonlinearLogisticRegression.R
 -1.7175
 ```
 
@@ -56,7 +56,7 @@ R --slave --args logit_test1.csv < nonlinearLogisticRegression.R
 Uses the Nelder-Mead algorithim to fit a one-layer neural network model on a user-inputted dataset of X & Y, with a user-inputted number of nodes *p*. Outputs minimum value of the objective function and the number of completed function evaluations.
 
 ```console
-R --slave --args nn_test1.csv 10 < neuralNetwork.R
+R --slave --args ./datasets/nn_test1.csv 10 < neuralNetwork.R
 0.0089142
 1865
 ```
