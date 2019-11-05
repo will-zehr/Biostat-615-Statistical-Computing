@@ -45,7 +45,19 @@ R --slave --args test1.csv 3 1.0 3 < kernelRidgeRegression.R
 
 Runs a nonlinear logistic regression with parameter *alpha*, which is in (-5,5) on a user-inputted dataset of 2 predictors (X and Z) and Y. Uses secant method to find the root of the score equation. Outputs estimated alpha.
 
+```
+R --slave --args logit_test1.csv < nonlinearLogisticRegression.R
+-1.7175
+```
+
 ### Project 5: Neural Network Model
 [neuralNetwork.R](./neuralNetwork.R)
 
-Uses the Nelder-Mead algorithim to fit a one-layer neural network model on a user-inputted dataset of X & Y, with a user-inputted number of nodes *p*.
+Uses the Nelder-Mead algorithim to fit a one-layer neural network model on a user-inputted dataset of X & Y, with a user-inputted number of nodes *p*. Outputs minimum value of the objective function and the number of completed function evaluations.
+
+```
+R --slave --args ~jiankang/Public/data/nn_test1.csv 10 <
+neuralNetwork.R
+0.0089142
+1865
+```
