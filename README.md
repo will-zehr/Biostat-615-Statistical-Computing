@@ -6,6 +6,11 @@ Code for class on algorithm design in R
 
 Wrote an R script to fit a polynomial regression model with *Y<sub>i</sub>=B<sub>0</sub>+B<sub>j</sub>X<sub>i</sub><sup>j</sup>+e<sub>i</sub>*. User inputs a number of parameters *p* and y values. Outputs beta coefficients.
 
+```console
+Rscript --slave --args 3 0.5 1.0 1.5 < constrainedPolynomialRegression.R
+0.10686514 1.20573206 0.60286603 0.20095534
+```
+
 ### Project 2: Fast Ridge Regression
 [fastRidgeRegression.R](./fastRidgeRegression.R)
 
