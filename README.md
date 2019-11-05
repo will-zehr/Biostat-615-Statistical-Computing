@@ -7,17 +7,17 @@ Code for class on algorithm design in R, with example runs
 Wrote an R script to fit a polynomial regression model with *Y<sub>i</sub>=B<sub>0</sub>+B<sub>j</sub>X<sub>i</sub><sup>j</sup>+e<sub>i</sub>*. User inputs a number of parameters *p* and y values. Outputs beta coefficients.
 
 ```console
-Rscript --slave --args 3 0.5 1.0 1.5 < constrainedPolynomialRegression.R
+R --slave --args 3 0.5 1.0 1.5 < constrainedPolynomialRegression.R
 0.10686514 1.20573206 0.60286603 0.20095534
 ```
 
 ### Project 2: Fast Ridge Regression
 [fastRidgeRegression.R](./fastRidgeRegression.R)
 
-For regularized linear regression, fit a ridge-penalized multiple linear regression, with a user-inputted lambda value and datasets X and Y. Outputs non-zero beta coefficients.
+For regularized linear regression, fit a ridge-penalized multiple linear regression, with a user-inputted lambda value and datasets X and Y. Outputs non-zero rounded beta coefficients.
 
 ```console
-Rscript --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
+R --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
 1 14
 2 -10
 3 2
@@ -34,6 +34,11 @@ Rscript --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
 [kernelRidgeRegression.R](./kernelRidgeRegression.R)
 
 Runs kernel ridge regression on user-specified X & Y training datasets, and evaluates choice of lambda using user-specified X & Y testing datasets. Outputs predictive mean squared errors.
+
+```console
+R --slave --args test1.csv 3 1.0 3 < kernelRidgeRegression.R
+8.029
+```
 
 ### Project 4: Nonlinear Logistic Regression
 [nonlinearLogisticRegression.R](./nonlinearLogisticRegression.R)
