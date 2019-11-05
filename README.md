@@ -1,5 +1,5 @@
 # Biostat-615-Statistical-Computing
-Code for class on algorithm design in R
+Code for class on algorithm design in R, with example runs
 
 ### Project 1: Constrained Polynomial Regression
 [constrainedPolynomialRegression.R](./constrainedPolynomialRegression.R)
@@ -15,6 +15,20 @@ Rscript --slave --args 3 0.5 1.0 1.5 < constrainedPolynomialRegression.R
 [fastRidgeRegression.R](./fastRidgeRegression.R)
 
 For regularized linear regression, fit a ridge-penalized multiple linear regression, with a user-inputted lambda value and datasets X and Y. Outputs non-zero beta coefficients.
+
+```console
+Rscript --slave --args test1.X test1.Y 0.1 < fastRidgeRegression.R
+1 14
+2 -10
+3 2
+4 -3
+5 17
+6 -2
+7 -1
+8 5
+9 22
+10 8
+```
 
 ### Project 3: Kernel Ridge Regression
 [kernelRidgeRegression.R](./kernelRidgeRegression.R)
