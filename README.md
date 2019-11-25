@@ -61,7 +61,7 @@ R --slave --args ./datasets/nn_test1.csv 10 < neuralNetwork.R
 1865
 ```
 
-###Project 6: Boostrap Confidence Interval Coverage Probability
+### Project 6: Boostrap Confidence Interval Coverage Probability
 [bootstrapCoverageProbability.R](./bootstrapCoverageProbability.R)
 
 Evaluates the probability that a bootstrap estimate of a 1-alpha confidence interval will cover the true parameter in 1000 repeated simulations, using data from a rayleigh distribution. Input arguments are the true value of sigma, the data sample size, the confidence level alpha, and the bootstrap sample size B.
