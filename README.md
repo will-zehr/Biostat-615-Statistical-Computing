@@ -70,3 +70,14 @@ Evaluates the probability that a bootstrap estimate of a 1-alpha confidence inte
 R --slave --args 1.0 10 0.8 10 < bootstrapCoverageProbability.R
 0.6
 ```
+
+### Project 7: EM Algorithim for Normal-Uniform Mixture
+[mixNormUnif.R](./mixNormUnif.R)
+
+Reads a file containing random variables from a mixture of gaussian distribution (with an integer mean and sd=1) and normal distribution (with min and max equal to the smallest & largest observed values). Outputs an estimate of the Gaussian mean.
+
+```R
+echo 0,1,2,3,4,5,6,7,9,9.5,10,10.5,11 > test.input.txt
+R --slave --args  test.input.txt < mixNormUnif.R
+10
+```
